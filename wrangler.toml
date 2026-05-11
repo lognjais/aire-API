@@ -1,0 +1,21 @@
+name = "aire-api"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+
+workers_dev = true
+
+[observability]
+enabled = true
+
+[[durable_objects.bindings]]
+name = "POLL_ROOM"
+class_name = "PollRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["PollRoom"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "aire"
+database_id = "4dc824ab-77b3-40e5-8e2a-835f06a93942"

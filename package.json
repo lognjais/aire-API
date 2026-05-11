@@ -1,28 +1,20 @@
 {
   "name": "aire-api",
-  "version": "1.0.0",
-  "description": "A smart polling system.",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Realtime polling API on Cloudflare Workers + Durable Objects + D1.",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 execute aire --remote --file=./schema.sql",
+    "db:migrate:local": "wrangler d1 execute aire --local --file=./schema.sql",
+    "tail": "wrangler tail",
+    "typecheck": "tsc --noEmit"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jvoltci/aire-API.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jvoltci/aire-API/issues"
-  },
-  "homepage": "https://github.com/jvoltci/aire-API#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "morgan": "^1.9.1",
-    "path": "^0.12.7",
-    "socket.io": "^2.4.1"
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251101.0",
+    "typescript": "^5.7.0",
+    "wrangler": "^4.0.0"
   }
 }
