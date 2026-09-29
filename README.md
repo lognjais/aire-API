@@ -8,7 +8,7 @@ Realtime polling API on **Cloudflare Workers** + **Durable Objects** + **D1**.
 - No cold starts. Free tier covers ~3M req/month.
 
 **Live:** https://aire-api.altrusian.workers.dev
-**Frontend:** https://github.com/jvoltci/aire
+**Frontend:** https://github.com/lognjais/aire
 
 ## API
 
